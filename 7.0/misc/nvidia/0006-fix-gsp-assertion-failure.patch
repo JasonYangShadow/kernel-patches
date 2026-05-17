@@ -1,0 +1,11 @@
+diff --color -ruN NVIDIA-kernel-module-source-595.71.05/src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c NVIDIA-kernel-module-source-595.71.05-patch/src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c
+--- NVIDIA-kernel-module-source-595.71.05/src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c	2026-05-17 08:43:13.904035912 +0900
++++ NVIDIA-kernel-module-source-595.71.05-patch/src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c	2026-05-17 08:50:40.841422673 +0900
+@@ -1440,6 +1440,7 @@
+             case NV_VGPU_MSG_EVENT_OS_ERROR_LOG:
+             case NV_VGPU_MSG_EVENT_GSP_LOAD_EXEC_GENERIC_BOOTLOADER:
+             case NV_VGPU_MSG_EVENT_GSP_LOAD_EXEC_HS_BINARY:
++	     case NV_VGPU_MSG_EVENT_PFM_REQ_HNDLR_STATE_SYNC_CALLBACK:
+                 break;
+             default:
+                 NV_PRINTF(LEVEL_ERROR, "Attempted to process RPC event from GPU%d: 0x%x (%s) during bootup without API lock\n",
